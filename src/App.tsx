@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Complete from "./pages/Complete";
+import FinancialInfo from "./pages/FinancialInfo";
+import Register from "./pages/Register";
+import NoPage from "./pages/NoPage";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Register />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/financialinfo" element={<FinancialInfo />} />
+          <Route path="/complete" element={<Complete />} />
+          <Route path="*" element={<NoPage />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
