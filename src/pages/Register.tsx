@@ -72,7 +72,7 @@ export default function Register() {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            width: "37%",
+            width: "31%",
             margin: "auto",
           }}
         >
@@ -133,7 +133,7 @@ export default function Register() {
               variant="filled"
               InputProps={{
                 disableUnderline: true,
-                sx: { borderRadius: "10px" },
+                sx: { borderRadius: "10px", marginTop: "5px" },
               }}
             />
           </div>
@@ -156,7 +156,7 @@ export default function Register() {
               variant="filled"
               InputProps={{
                 disableUnderline: true,
-                sx: { borderRadius: "10px" },
+                sx: { borderRadius: "10px", marginTop: "5px" },
               }}
             />
           </div>
